@@ -88,17 +88,21 @@ public class Cleaner : MonoBehaviour
 	private void OnEnable()
 	{
 		input.Enable();
-		input.Player.Move.performed += OnMovePerformed;
-		input.Player.Move.canceled += OnMoveCanceled;
-		input.Player.Attack.performed += OnAttackPerformed;
-		input.Player.Attack.canceled += OnAttackCanceled;
+		input.Cleaner.Move.performed += OnMovePerformed;
+		input.Cleaner.Move.canceled += OnMoveCanceled;
+		input.Cleaner.Attack.performed += OnAttackPerformed;
+		input.Cleaner.Attack.canceled += OnAttackCanceled;
+		input.Cleaner.TrashCan.performed += OnNum1Performed;
+		input.Cleaner.Broom.performed += OnNum2Performed;
 	}
 	private void OnDisable()
 	{
-		input.Player.Move.performed -= OnMovePerformed;
-		input.Player.Move.canceled -= OnMoveCanceled;
-		input.Player.Attack.performed -= OnAttackPerformed;
-		input.Player.Attack.canceled -= OnAttackCanceled;
+		input.Cleaner.Move.performed -= OnMovePerformed;
+		input.Cleaner.Move.canceled -= OnMoveCanceled;
+		input.Cleaner.Attack.performed -= OnAttackPerformed;
+		input.Cleaner.Attack.canceled -= OnAttackCanceled;
+		input.Cleaner.TrashCan.performed -= OnNum1Performed;
+		input.Cleaner.Broom.performed -= OnNum2Performed;
 		input.Disable();
 	}
 	private void Update()
@@ -131,11 +135,11 @@ public class Cleaner : MonoBehaviour
 	}
 	private void OnNum1Performed(InputAction.CallbackContext _context)
 	{
-
+		aim.ChangeTool(0);
 	}
 	private void OnNum2Performed(InputAction.CallbackContext _context)
 	{
-
+		aim.ChangeTool(1);
 	}
 	private void RemoveInvincibility()
 	{

@@ -19,8 +19,11 @@ public class CleanerAim : MonoBehaviour
 	#region PublicMethod
 	public void Initialize()
 	{
+		foreach(Tool t in tools)
+		{
+			t.Initialize();
+		}
 		tool = tools[toolIndex];
-		tool.Initialize();
 		transform.Find("Renderer").TryGetComponent(out body);
 		body.Initialize();
 	}
@@ -46,19 +49,14 @@ public class CleanerAim : MonoBehaviour
 	{
 		tool.ForceQuit();
 	}
-	public void ChangeTool()
+	public void ChangeTool(int _index)
 	{
+		if (toolIndex == _index)
+			return;
+		toolIndex = _index;
 		StopAction();
-		if(toolIndex == tools.Count - 1)
-		{
-			toolIndex = 0;
-		}
-		else
-		{
-			++toolIndex;
-		}
 		tool.gameObject.SetActive(false);
-		tool = tools[toolIndex];
+		tool = tools[_index];
 		tool.gameObject.SetActive(true);
 	}
 	#endregion

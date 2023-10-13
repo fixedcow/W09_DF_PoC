@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,55 +9,47 @@ public class PlayerAim : MonoBehaviour
 	#endregion
 
 	#region PrivateVariables
-	private Bow bow;
+	[SerializeField] private Tool tool;
 	private Body body;
 
-	[SerializeField] private float shotCooldown = 0.5f;
-	private float cooldownTimer = 0f;
 	private bool isCalled;
 	#endregion
 
 	#region PublicMethod
 	public void Initialize()
 	{
-		transform.Find("Bow").TryGetComponent(out bow);
-		bow.Initialize();
+		tool.Initialize();
 		transform.Find("Renderer").TryGetComponent(out body);
 		body.Initialize();
-		cooldownTimer = shotCooldown;
 	}
-	public void OpenFire()
+	public void TryAction()
 	{
 		isCalled = true;
 	}
-	public void HoldFire()
+	public void StopAction()
 	{
 		isCalled = false;
+		ForceQuit();
 	}
 	public void HandleInput()
 	{
-		bow.Look(Utils.MousePosition);
+		tool.Look(Utils.MousePosition);
 		body.SetSpriteDirection(Utils.MousePosition);
-		Fire();
+		if(isCalled)
+		{
+			Act();
+		}
 	}
 	public void ForceQuit()
 	{
-		bow.ForceQuit();
+		tool.ForceQuit();
 	}
 	#endregion
 
 	#region PrivateMethod
-	private void Fire()
+	private void Act()
 	{
-		cooldownTimer += Time.unscaledDeltaTime;
-		if (isCalled == true)
-		{
-			if(cooldownTimer > shotCooldown)
-			{
-				cooldownTimer = 0f;
-				bow.Fire();
-			}
-		}
+		tool.Act();
 	}
 	#endregion
 }

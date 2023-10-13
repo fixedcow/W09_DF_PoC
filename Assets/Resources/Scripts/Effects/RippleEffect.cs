@@ -18,7 +18,7 @@ public class RippleEffect : MonoBehaviour
 	#region PublicMethod
 	public void Initialize()
 	{
-		transform.position = Player.instance.transform.position;
+		transform.position = PlayerBow.instance.transform.position;
 		sr.material.SetFloat("_WaveDistanceFromCenter", waveDistanceStart);
 	}
 	#endregion

@@ -54,18 +54,9 @@ public class Arrow : MonoBehaviour
 		{
 			if (collision.gameObject.layer == LayerMask.NameToLayer("Monster"))
 			{
-/*				MonsterBase monster = collision.gameObject.GetComponent<MonsterBase>();
-				if (isRecalled == false)
-				{
-					//deadEye.ChangeValue(1);
-					monster.GetDamage(1);
-				}
-				else
-				{
-					deadEye.ChangeValue(5);
-					monster.GetDamage(3);
-					EffectManager.instance.InstantiateRecallHitEffect(transform.position);
-				}*/
+				Monster monster = collision.gameObject.GetComponent<Monster>();
+				monster.Hit();
+				monster.ForcePush(transform.up);
 				DestroySelf();
 			}
 		}

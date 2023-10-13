@@ -9,7 +9,7 @@ public class PlayerDash : MonoBehaviour
 	#endregion
 
 	#region PrivateVariables
-	private Player main;
+	private PlayerBow main;
 	private PlayerMove move;
 	private Rigidbody2D rb;
 	private ParticleSystem dustParticle;

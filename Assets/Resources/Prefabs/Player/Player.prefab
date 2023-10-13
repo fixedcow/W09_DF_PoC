@@ -4960,7 +4960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7677067290173016368}
-  - component: {fileID: 7677067290173016397}
+  - component: {fileID: 2362437308643697098}
   - component: {fileID: 4465755224391071370}
   - component: {fileID: 7677067290173016370}
   - component: {fileID: 7677067290173016371}
@@ -4969,7 +4969,7 @@ GameObject:
   - component: {fileID: 7677067290173016396}
   - component: {fileID: 924218168}
   m_Layer: 6
-  m_Name: Player Bow
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4994,7 +4994,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7677067290173016397
+--- !u!114 &2362437308643697098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5003,7 +5003,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7677067290173016374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5402037d1c8666b4c832a546dce078f5, type: 3}
+  m_Script: {fileID: 11500000, guid: e4de57098f35038419652caa97b847c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   invincibleTime: 1.6
@@ -5050,7 +5050,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  deadEyeAdditive: 1.6
 --- !u!114 &7677067290173016398
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -27,8 +27,8 @@ public class Monster : MonoBehaviour
 		hp--;
 		if(hp <= 0)
 		{
-			Die();
 			BloodManager.instance.SpawnSprite(transform.position);
+			Die();
 		}
 		else
 		{

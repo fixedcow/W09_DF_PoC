@@ -5137,12 +5137,12 @@ GameObject:
   - component: {fileID: 7677067290173016396}
   - component: {fileID: 1088862605}
   m_Layer: 6
-  m_Name: Player Broom
+  m_Name: Cleaner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7677067290173016368
 Transform:
   m_ObjectHideFlags: 0
@@ -5218,7 +5218,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  deadEyeAdditive: 1.6
 --- !u!50 &7677067290173016399
 Rigidbody2D:
   serializedVersion: 4

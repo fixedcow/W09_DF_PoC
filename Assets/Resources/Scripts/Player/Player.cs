@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerBow : MonoBehaviour
+public class Player : MonoBehaviour
 {
 	#region PublicVariables
-	public static PlayerBow instance;
+	public static Player instance;
 	#endregion
 
 	#region PrivateVariables
@@ -21,7 +21,7 @@ public class PlayerBow : MonoBehaviour
 
 	private ParticleSystem dustTrail;
 
-	[SerializeField] private float invincibleTime = 1.6f;
+	[SerializeField] private float invincibleTime = 1f;
 	[SerializeField][ReadOnly] private bool canAct = true;
 	[SerializeField][ReadOnly] private bool isInvincible = false;
 	#endregion

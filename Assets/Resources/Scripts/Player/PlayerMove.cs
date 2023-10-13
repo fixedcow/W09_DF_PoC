@@ -13,7 +13,6 @@ public class PlayerMove : MonoBehaviour
 
 	private Vector2 direction;
 	[SerializeField] private float speed;
-	[SerializeField] private float deadEyeAdditive;
 	private float speedMult = 1f;
 	#endregion
 

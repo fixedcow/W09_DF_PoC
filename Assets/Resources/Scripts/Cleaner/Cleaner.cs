@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerBroom : MonoBehaviour
+public class Cleaner : MonoBehaviour
 {
 	#region PublicVariables
-	public static PlayerBroom instance;
+	public static Cleaner instance;
 	#endregion
 
 	#region PrivateVariables

@@ -46,27 +46,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Recall"",
-                    ""type"": ""Button"",
-                    ""id"": ""3b793fae-b1fa-4724-aa58-92a8c78a7d0f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Dash"",
                     ""type"": ""Button"",
                     ""id"": ""93f3fb3e-6b35-4f9c-ab0b-27367fb65ce1"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""BulletTime"",
-                    ""type"": ""Button"",
-                    ""id"": ""0ee809b2-ccd9-4074-a070-55d5b992f84f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -164,18 +146,159 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5060c219-ee7f-4d73-8387-89aa03007e04"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""id"": ""19087bd7-c1ec-4919-92d9-6f4c2c0ca253"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Cleaner"",
+            ""id"": ""ac3780fa-771a-41bb-81c7-03dbc5676701"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""3abb381d-f909-48cc-8ab8-3654c7d55564"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""5f58cba6-c6b8-4807-8efe-b35b50f58391"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""91c63ea9-6dad-46d8-94f8-3d59abf33610"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TrashCan"",
+                    ""type"": ""Button"",
+                    ""id"": ""3d41c3cc-fdb7-4a90-bd84-ee18fe2d61fe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Broom"",
+                    ""type"": ""Button"",
+                    ""id"": ""c277329e-7b17-432d-915f-d88e1f5f9cc9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e1f4cf30-b31d-4874-88e2-87536a244694"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""2850fffb-4c0d-4b6e-b25d-8eb36029cd27"",
+                    ""path"": ""Dpad"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Recall"",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""5efa36a1-d6ea-4454-8740-028afa370a94"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""52f02e30-d3a0-4f63-9081-72da805cdd8e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""df72545b-9c22-4f89-9695-64b21d32a8c2"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""cd7bd5eb-36ed-4bb5-97a7-fbb9e06612f1"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""514835e6-eb7f-46e3-a1c7-a314c240b794"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""19087bd7-c1ec-4919-92d9-6f4c2c0ca253"",
+                    ""id"": ""6b3052e1-df4f-49eb-bd00-6b1cfcb8e8a1"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed89e79a-df3e-468f-a2ed-adaec59014a2"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -186,12 +309,23 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""0d7c28f6-39db-42ee-a36c-370124ea6b3e"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""308d4987-cba1-446d-b115-6575ae07bf6c"",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""BulletTime"",
+                    ""action"": ""TrashCan"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fec73a92-d680-4fd0-a8ea-de637878a64a"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Broom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -265,9 +399,14 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
-        m_Player_Recall = m_Player.FindAction("Recall", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
-        m_Player_BulletTime = m_Player.FindAction("BulletTime", throwIfNotFound: true);
+        // Cleaner
+        m_Cleaner = asset.FindActionMap("Cleaner", throwIfNotFound: true);
+        m_Cleaner_Move = m_Cleaner.FindAction("Move", throwIfNotFound: true);
+        m_Cleaner_Attack = m_Cleaner.FindAction("Attack", throwIfNotFound: true);
+        m_Cleaner_Dash = m_Cleaner.FindAction("Dash", throwIfNotFound: true);
+        m_Cleaner_TrashCan = m_Cleaner.FindAction("TrashCan", throwIfNotFound: true);
+        m_Cleaner_Broom = m_Cleaner.FindAction("Broom", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -331,18 +470,14 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Attack;
-    private readonly InputAction m_Player_Recall;
     private readonly InputAction m_Player_Dash;
-    private readonly InputAction m_Player_BulletTime;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
         public PlayerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
-        public InputAction @Recall => m_Wrapper.m_Player_Recall;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
-        public InputAction @BulletTime => m_Wrapper.m_Player_BulletTime;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -358,15 +493,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
-            @Recall.started += instance.OnRecall;
-            @Recall.performed += instance.OnRecall;
-            @Recall.canceled += instance.OnRecall;
             @Dash.started += instance.OnDash;
             @Dash.performed += instance.OnDash;
             @Dash.canceled += instance.OnDash;
-            @BulletTime.started += instance.OnBulletTime;
-            @BulletTime.performed += instance.OnBulletTime;
-            @BulletTime.canceled += instance.OnBulletTime;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -377,15 +506,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
-            @Recall.started -= instance.OnRecall;
-            @Recall.performed -= instance.OnRecall;
-            @Recall.canceled -= instance.OnRecall;
             @Dash.started -= instance.OnDash;
             @Dash.performed -= instance.OnDash;
             @Dash.canceled -= instance.OnDash;
-            @BulletTime.started -= instance.OnBulletTime;
-            @BulletTime.performed -= instance.OnBulletTime;
-            @BulletTime.canceled -= instance.OnBulletTime;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -403,6 +526,84 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Cleaner
+    private readonly InputActionMap m_Cleaner;
+    private List<ICleanerActions> m_CleanerActionsCallbackInterfaces = new List<ICleanerActions>();
+    private readonly InputAction m_Cleaner_Move;
+    private readonly InputAction m_Cleaner_Attack;
+    private readonly InputAction m_Cleaner_Dash;
+    private readonly InputAction m_Cleaner_TrashCan;
+    private readonly InputAction m_Cleaner_Broom;
+    public struct CleanerActions
+    {
+        private @PlayerInput m_Wrapper;
+        public CleanerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Cleaner_Move;
+        public InputAction @Attack => m_Wrapper.m_Cleaner_Attack;
+        public InputAction @Dash => m_Wrapper.m_Cleaner_Dash;
+        public InputAction @TrashCan => m_Wrapper.m_Cleaner_TrashCan;
+        public InputAction @Broom => m_Wrapper.m_Cleaner_Broom;
+        public InputActionMap Get() { return m_Wrapper.m_Cleaner; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CleanerActions set) { return set.Get(); }
+        public void AddCallbacks(ICleanerActions instance)
+        {
+            if (instance == null || m_Wrapper.m_CleanerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_CleanerActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
+            @Dash.started += instance.OnDash;
+            @Dash.performed += instance.OnDash;
+            @Dash.canceled += instance.OnDash;
+            @TrashCan.started += instance.OnTrashCan;
+            @TrashCan.performed += instance.OnTrashCan;
+            @TrashCan.canceled += instance.OnTrashCan;
+            @Broom.started += instance.OnBroom;
+            @Broom.performed += instance.OnBroom;
+            @Broom.canceled += instance.OnBroom;
+        }
+
+        private void UnregisterCallbacks(ICleanerActions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
+            @Dash.started -= instance.OnDash;
+            @Dash.performed -= instance.OnDash;
+            @Dash.canceled -= instance.OnDash;
+            @TrashCan.started -= instance.OnTrashCan;
+            @TrashCan.performed -= instance.OnTrashCan;
+            @TrashCan.canceled -= instance.OnTrashCan;
+            @Broom.started -= instance.OnBroom;
+            @Broom.performed -= instance.OnBroom;
+            @Broom.canceled -= instance.OnBroom;
+        }
+
+        public void RemoveCallbacks(ICleanerActions instance)
+        {
+            if (m_Wrapper.m_CleanerActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ICleanerActions instance)
+        {
+            foreach (var item in m_Wrapper.m_CleanerActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_CleanerActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public CleanerActions @Cleaner => new CleanerActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -452,8 +653,14 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
-        void OnRecall(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
-        void OnBulletTime(InputAction.CallbackContext context);
+    }
+    public interface ICleanerActions
+    {
+        void OnMove(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
+        void OnTrashCan(InputAction.CallbackContext context);
+        void OnBroom(InputAction.CallbackContext context);
     }
 }

@@ -24,27 +24,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Recall",
-                    "type": "Button",
-                    "id": "3b793fae-b1fa-4724-aa58-92a8c78a7d0f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Dash",
                     "type": "Button",
                     "id": "93f3fb3e-6b35-4f9c-ab0b-27367fb65ce1",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "BulletTime",
-                    "type": "Button",
-                    "id": "0ee809b2-ccd9-4074-a070-55d5b992f84f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -142,18 +124,159 @@
                 },
                 {
                     "name": "",
-                    "id": "5060c219-ee7f-4d73-8387-89aa03007e04",
-                    "path": "<Mouse>/rightButton",
+                    "id": "19087bd7-c1ec-4919-92d9-6f4c2c0ca253",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Cleaner",
+            "id": "ac3780fa-771a-41bb-81c7-03dbc5676701",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "3abb381d-f909-48cc-8ab8-3654c7d55564",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "5f58cba6-c6b8-4807-8efe-b35b50f58391",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "91c63ea9-6dad-46d8-94f8-3d59abf33610",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TrashCan",
+                    "type": "Button",
+                    "id": "3d41c3cc-fdb7-4a90-bd84-ee18fe2d61fe",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Broom",
+                    "type": "Button",
+                    "id": "c277329e-7b17-432d-915f-d88e1f5f9cc9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e1f4cf30-b31d-4874-88e2-87536a244694",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "WASD",
+                    "id": "2850fffb-4c0d-4b6e-b25d-8eb36029cd27",
+                    "path": "Dpad",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Recall",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "5efa36a1-d6ea-4454-8740-028afa370a94",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "52f02e30-d3a0-4f63-9081-72da805cdd8e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "df72545b-9c22-4f89-9695-64b21d32a8c2",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "cd7bd5eb-36ed-4bb5-97a7-fbb9e06612f1",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "514835e6-eb7f-46e3-a1c7-a314c240b794",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "19087bd7-c1ec-4919-92d9-6f4c2c0ca253",
+                    "id": "6b3052e1-df4f-49eb-bd00-6b1cfcb8e8a1",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed89e79a-df3e-468f-a2ed-adaec59014a2",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
@@ -164,12 +287,23 @@
                 },
                 {
                     "name": "",
-                    "id": "0d7c28f6-39db-42ee-a36c-370124ea6b3e",
-                    "path": "<Keyboard>/space",
+                    "id": "308d4987-cba1-446d-b115-6575ae07bf6c",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "BulletTime",
+                    "action": "TrashCan",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fec73a92-d680-4fd0-a8ea-de637878a64a",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Broom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

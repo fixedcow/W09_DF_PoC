@@ -13,7 +13,7 @@ public class Cleaner : MonoBehaviour
 	#region PrivateVariables
 	private PlayerInput input;
 	private PlayerMove move;
-	private PlayerAim aim;
+	private CleanerAim aim;
 	private PlayerHp hp;
 	private Body body;
 	private Tool tool;
@@ -128,6 +128,14 @@ public class Cleaner : MonoBehaviour
 	private void OnAttackCanceled(InputAction.CallbackContext _context)
 	{
 		aim.StopAction();
+	}
+	private void OnNum1Performed(InputAction.CallbackContext _context)
+	{
+
+	}
+	private void OnNum2Performed(InputAction.CallbackContext _context)
+	{
+
 	}
 	private void RemoveInvincibility()
 	{

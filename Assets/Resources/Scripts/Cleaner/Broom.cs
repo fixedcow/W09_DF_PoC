@@ -8,6 +8,7 @@ public class Broom : Tool
 	#endregion
 
 	#region PrivateVariables
+	[SerializeField] private float interactDistance;
 	#endregion
 
 	#region PublicMethod

@@ -8,7 +8,9 @@ public class CleanerAim : MonoBehaviour
 	#endregion
 
 	#region PrivateVariables
-	[SerializeField] private Tool tool;
+	[SerializeField] private List<Tool> tools = new List<Tool>();
+	private Tool tool;
+	private int toolIndex = 0;
 	private Body body;
 
 	private bool isCalled;
@@ -17,6 +19,7 @@ public class CleanerAim : MonoBehaviour
 	#region PublicMethod
 	public void Initialize()
 	{
+		tool = tools[toolIndex];
 		tool.Initialize();
 		transform.Find("Renderer").TryGetComponent(out body);
 		body.Initialize();
@@ -42,6 +45,21 @@ public class CleanerAim : MonoBehaviour
 	public void ForceQuit()
 	{
 		tool.ForceQuit();
+	}
+	public void ChangeTool()
+	{
+		StopAction();
+		if(toolIndex == tools.Count - 1)
+		{
+			toolIndex = 0;
+		}
+		else
+		{
+			++toolIndex;
+		}
+		tool.gameObject.SetActive(false);
+		tool = tools[toolIndex];
+		tool.gameObject.SetActive(true);
 	}
 	#endregion
 

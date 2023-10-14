@@ -16,7 +16,6 @@ public class Cleaner : MonoBehaviour
 	private CleanerAim aim;
 	private PlayerHp hp;
 	private Body body;
-	private Tool tool;
 
 	private ParticleSystem dustTrail;
 
@@ -57,7 +56,6 @@ public class Cleaner : MonoBehaviour
 			return;
 		hp.ChangeValue(_amount);
 		body.StartFlickering(invincibleTime);
-		tool.StartFlickering(invincibleTime);
 		SetInvincibility(true);
 		Invoke(nameof(RemoveInvincibility), invincibleTime);
 	}
@@ -82,7 +80,6 @@ public class Cleaner : MonoBehaviour
 		TryGetComponent(out hp);
 		Initialize();
 		transform.Find("Renderer").TryGetComponent(out body);
-		transform.Find("Broom").TryGetComponent(out tool);
 		transform.Find("Dust Trail").TryGetComponent(out dustTrail);
 	}
 	private void OnEnable()

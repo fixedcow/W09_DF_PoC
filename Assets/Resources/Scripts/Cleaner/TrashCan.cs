@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrashCan : Tool
+public class TrashCan : CleanerTool
 {
 	#region PublicVariables
 	#endregion
 
 	#region PrivateVariables
-	[SerializeField] private float interactDistance;
 	#endregion
 
 	#region PublicMethod
@@ -19,11 +18,17 @@ public class TrashCan : Tool
 	}
 	public override void Act()
 	{
-		
+		if (target != null)
+		{
+			target.Cleaning();
+		}
 	}
 	public override void ForceQuit()
 	{
-		
+		if(target != null)
+		{
+			target.ForceQuit();
+		}
 	}
 	#endregion
 
@@ -34,10 +39,11 @@ public class TrashCan : Tool
 	}
 	private Vector2 GetLocalPositionByMousePosition()
 	{
-		float x = Utils.MousePosition.x > transform.position.x ? -0.6f : 0;
-		float y = Utils.MousePosition.y > transform.position.y ? 0.2f : 0;
+		float x = Utils.MousePosition.x > main.transform.position.x ? -0.6f : 0;
+		float y = Utils.MousePosition.y > main.transform.position.y ? 0.2f : 0;
 
 		return new Vector2(x, y);
 	}
+
 	#endregion
 }

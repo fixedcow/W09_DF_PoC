@@ -10,12 +10,17 @@ public class BodyManager : MonoBehaviour
 
 	#region PrivateVariables
 	[SerializeField] private GameObject orcBody;
+	[SerializeField] private GameObject potMess;
 	#endregion
 
 	#region PublicMethod
 	public void SpawnOrcBody(Vector2 _position)
 	{
 		Instantiate(orcBody, _position, Quaternion.identity, transform);
+	}
+	public void SpawnPotMess(Vector2 _position)
+	{
+		Instantiate(potMess, _position, Quaternion.identity, transform);
 	}
 	#endregion
 

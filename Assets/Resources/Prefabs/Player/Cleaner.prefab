@@ -4981,7 +4981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angularSpeed: 3
-  targetTag: TrashCan
+  targetLayer: 
   interactDistance: 1.5
   target: {fileID: 0}
 --- !u!1 &2433930435959773013
@@ -5153,7 +5153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angularSpeed: 5
-  targetTag: Broom
+  targetLayer: 
   interactDistance: 2
   target: {fileID: 0}
 --- !u!1 &7677067290106692709
@@ -5560,8 +5560,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.8
-      minScalar: 0.4
+      scalar: 0.4
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:

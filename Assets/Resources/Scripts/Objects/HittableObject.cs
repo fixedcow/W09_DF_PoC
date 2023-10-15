@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public abstract class HittableObject : MonoBehaviour
 {
 	#region PublicVariables
 	#endregion
 
 	#region PrivateVariables
-	private int hp;
-	[SerializeField] private int hpMax;
+	protected int hp;
+	[SerializeField] protected int hpMax;
 	#endregion
 
 	#region PublicMethod
@@ -21,29 +21,22 @@ public class Monster : MonoBehaviour
 	{
 		transform.position += (Vector3)_direction * 0.5f;
 	}
-	public void Hit()
+	public virtual void Hit()
 	{
-		BloodManager.instance.SpawnParticle(transform.position);
 		hp--;
 		if(hp <= 0)
 		{
-			BloodManager.instance.SpawnSprite(transform.position);
 			Die();
 		}
-		else
-		{
-			BloodManager.instance.SpawnTrail(transform.position);
-		}
 	}
-	public void Die()
+	public virtual void Die()
 	{
-		BodyManager.instance.SpawnOrcBody(transform.position);
 		Destroy(gameObject);
 	}
 	#endregion
 
 	#region PrivateMethod
-	private void Start()
+	protected virtual void Start()
 	{
 		Initialize();
 	}

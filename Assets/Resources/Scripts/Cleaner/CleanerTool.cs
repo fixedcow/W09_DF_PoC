@@ -11,7 +11,7 @@ public abstract class CleanerTool : Tool
 	#region PrivateVariables
 	protected Cleaner main;
 
-	[SerializeField] protected string targetTag;
+	[SerializeField] protected string targetLayer;
 	[SerializeField] protected float interactDistance;
 	[SerializeField][ReadOnly] protected Mess target;
 	#endregion
@@ -33,11 +33,10 @@ public abstract class CleanerTool : Tool
 	{
 		RaycastHit2D hit = GetMousePositionMess();
 		if(hit.collider != null
-			&& hit.collider.CompareTag(targetTag) == true
 			&& Vector2.Distance(main.transform.position, hit.collider.transform.position) <= interactDistance)
 		{
 			Mess m = hit.collider.GetComponent<Mess>();
-			if (target != null)
+			if (target != null && target != m)
 			{
 				target.ForceQuit(); //TODO 이상하게 한 번에 여러개 지우는 버그 고쳐야함
 			}
@@ -48,7 +47,7 @@ public abstract class CleanerTool : Tool
 		{
 			if (target != null)
 			{
-				target.HighlightOff();
+				target.ForceQuit();
 			}
 			target = null;
 		}
@@ -56,7 +55,7 @@ public abstract class CleanerTool : Tool
 	protected RaycastHit2D GetMousePositionMess()
 	{
 		RaycastHit2D hit = Physics2D.Raycast(Utils.MousePosition, Vector2.zero
-			, float.MaxValue, 1 << LayerMask.NameToLayer("Mess"));
+			, float.MaxValue, 1 << LayerMask.NameToLayer(targetLayer));
 		return hit;
 	}
 	#endregion

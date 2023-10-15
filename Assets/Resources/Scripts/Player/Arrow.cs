@@ -52,9 +52,9 @@ public class Arrow : MonoBehaviour
 	{
 		if (collision != null)
 		{
-			if (collision.gameObject.layer == LayerMask.NameToLayer("Monster"))
+			if (collision.gameObject.layer == LayerMask.NameToLayer("Hittable"))
 			{
-				Monster monster = collision.gameObject.GetComponent<Monster>();
+				HittableObject monster = collision.gameObject.GetComponent<HittableObject>();
 				monster.Hit();
 				monster.ForcePush(transform.up);
 				DestroySelf();

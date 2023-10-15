@@ -41,20 +41,18 @@ public abstract class Mess : MonoBehaviour
 			return;
 		progress.ActivateProgress();
 		cleaning = true;
-		timer = 0;
 	}
 	public void ForceQuit()
 	{
-		progress.DeactivateProgress();
 		HighlightOff();
 		cleaning = false;
 	}
 	public void DestroySelf()
 	{
 		destroyed = true;
-		HighlightOff();
+		progress.DeactivateProgress();
 		ForceQuit();
-		transform.DOScale(0f, 0.6f).From(1.2f).OnComplete(() => Destroy(gameObject));
+		transform.DOScale(0f, 0.4f).From(1.6f).OnComplete(() => Destroy(gameObject));
 	}
 	#endregion
 
@@ -80,7 +78,8 @@ public abstract class Mess : MonoBehaviour
 		else if(timer > 0)
 		{
 			timer -= Time.deltaTime;
-			if(timer <= 0)
+			progress.UpdateProgress(timer / duration);
+			if (timer <= 0)
 			{
 				timer = 0;
 				progress.DeactivateProgress();

@@ -35,7 +35,7 @@ public class TrashCan : CleanerTool
 	#region PrivateMethod
 	protected int GetSortingOrderByMousePosition()
 	{
-		return Utils.MousePosition.y > transform.position.y ? -1 : 1;
+		return Utils.MousePosition.y > main.transform.position.y ? -1 : 1;
 	}
 	private Vector2 GetLocalPositionByMousePosition()
 	{

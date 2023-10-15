@@ -29,7 +29,7 @@ public abstract class CleanerTool : Tool
 	{
 		SetTarget();
 	}
-	protected void SetTarget()
+	protected virtual void SetTarget()
 	{
 		RaycastHit2D hit = GetMousePositionMess();
 		if(hit.collider != null
@@ -38,7 +38,7 @@ public abstract class CleanerTool : Tool
 			Mess m = hit.collider.GetComponent<Mess>();
 			if (target != null && target != m)
 			{
-				target.ForceQuit(); //TODO 이상하게 한 번에 여러개 지우는 버그 고쳐야함
+				target.ForceQuit();
 			}
 			target = m;
 			target.HighlightOn();

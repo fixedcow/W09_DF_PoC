@@ -77,7 +77,7 @@ public abstract class Mess : MonoBehaviour
 		}
 		else if(timer > 0)
 		{
-			timer -= Time.deltaTime;
+			timer -= Time.deltaTime * 0.5f;
 			progress.UpdateProgress(timer / duration);
 			if (timer <= 0)
 			{

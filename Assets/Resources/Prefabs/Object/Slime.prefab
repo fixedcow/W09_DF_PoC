@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8403907726304506004}
-  - component: {fileID: 7129760310291361278}
+  - component: {fileID: 4449238092184430782}
   - component: {fileID: 8403907726304506006}
   - component: {fileID: 8403907726304506007}
   - component: {fileID: 266939481332655692}
   m_Layer: 7
-  m_Name: Orc
+  m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8403907726304506011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36,7 +36,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7129760310291361278
+--- !u!114 &4449238092184430782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,15 +45,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8403907726304506011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d86c14dd9cad448b4e1a28dc309cbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 8987b542010e23f40b87f5e8ab7baf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpMax: 3
-  moveSpeed: 1
-  moveDurationMin: 2
-  moveDurationMax: 3
-  idleDurationMin: 3
-  idleDurationMax: 5
+  hpMax: 2
+  moveDistance: 2
+  idleDurationMin: 2
+  idleDurationMax: 4
   stateTimer: 0
   stateTimerMax: 0
   currentState: 
@@ -70,7 +68,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -81,7 +79,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.6}
+  m_Size: {x: 0.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &8403907726304506007
 Rigidbody2D:
@@ -91,7 +89,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8403907726304506011}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
@@ -114,7 +112,7 @@ Animator:
   m_GameObject: {fileID: 8403907726304506011}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d43639594b289f7458d8d984d9636367, type: 2}
+  m_Controller: {fileID: 9100000, guid: ad460f1a0e1e5d84aac55bc3968dca64, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -198,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 1084615071
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2034813063, guid: d64733d912eaaff4cbff34fa5ed056d4, type: 3}
+  m_Sprite: {fileID: -2123801812, guid: 63efbbe9087427b41b90a4417b1d25fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

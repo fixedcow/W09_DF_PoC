@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
 
 	#region PrivateVariables
 	private Animator anim;
+	private Rigidbody2D rb;
 
 	private Vector2 direction;
 	[SerializeField] private float speed;
@@ -20,6 +21,7 @@ public class PlayerMove : MonoBehaviour
 	public void Initialize()
 	{
 		transform.Find("Renderer").TryGetComponent(out anim);
+		TryGetComponent(out rb);
 	}
 	public void Move(Vector2 _direction)
 	{
@@ -41,6 +43,7 @@ public class PlayerMove : MonoBehaviour
 			{
 				transform.Translate(direction * speed * speedMult * Time.unscaledDeltaTime);
 			}
+			rb.velocity = Vector2.zero;
 		}
 	}
 	public void SetSpeedMult(float _value)

@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3062027540474190224}
   - component: {fileID: 3062027540474190225}
+  - component: {fileID: 8219665089605081454}
   - component: {fileID: 8510725193115726225}
   - component: {fileID: 5191475357370077670}
   - component: {fileID: 2055783006069591316}
   m_Layer: 9
-  m_Name: Pot Mess
+  m_Name: Slime Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6886194bbe73d864c882a0cfd52df380, type: 2}
+  - {fileID: 2100000, guid: b34bc880745c28143a5c169030e5b3c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,10 +75,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -922759897
-  m_SortingLayer: 1
+  m_SortingLayerID: 1084615071
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c8c1079f05c611d44a1bbe94dd2e7f06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf7c09472d1d6b34b92854954ce6bc02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,6 +89,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8219665089605081454
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3062027540474190230}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.25}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.3}
+  m_EdgeRadius: 0
 --- !u!114 &8510725193115726225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 678cf9be8026c034aa2876d54101270d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.5
+  duration: 2
 --- !u!114 &5191475357370077670
 MonoBehaviour:
   m_ObjectHideFlags: 0

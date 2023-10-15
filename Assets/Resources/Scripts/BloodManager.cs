@@ -12,6 +12,8 @@ public class BloodManager : MonoBehaviour
 	[SerializeField] private GameObject bloodSprite;
 	[SerializeField] private GameObject bloodTrail;
 	[SerializeField] private GameObject bloodParticle;
+	[SerializeField] private GameObject slimeTrail;
+	[SerializeField] private GameObject slimeParticle;
 	#endregion
 
 	#region PublicMethod
@@ -28,6 +30,15 @@ public class BloodManager : MonoBehaviour
 	public void SpawnParticle(Vector2 _position)
 	{
 		Instantiate(bloodParticle, _position, Quaternion.identity, transform);
+	}
+	public void SpawnSlimeParticle(Vector2 _position)
+	{
+		Instantiate(slimeParticle, _position, Quaternion.identity, transform);
+	}
+	public void SpawnSlimeTrail(Vector2 _position)
+	{
+		Vector2 randPos = new Vector2(Random.Range(-0.2f, 0.2f), Random.Range(-0.1f, 0.1f));
+		Instantiate(slimeTrail, _position, Quaternion.identity, transform);
 	}
 	#endregion
 
